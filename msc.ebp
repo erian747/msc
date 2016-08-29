@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_project_file>
+	<EmBitzVersion release="0.42" revision="0" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="msc" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\msc.elf" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-O0" />
+					<Add option="-g2" />
+					<Add symbol="TARGET_DEBUG" />
+				</Compiler>
+				<Cpp>
+					<Add option="-g2" />
+				</Cpp>
+				<Assembler>
+					<Add option="--gdwarf-2" />
+				</Assembler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Debug\msc.elf" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g2" />
+				</Compiler>
+				<Cpp>
+					<Add option="-O2" />
+				</Cpp>
+				<Assembler>
+					<Add option="--gdwarf-2" />
+				</Assembler>
+			</Target>
+			<Target title="Opt2">
+				<Option output="bin\Debug\msc.elf" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add option="-DTARGET_DEBUG" />
+				</Compiler>
+				<Assembler>
+					<Add option="--gdwarf-2" />
+				</Assembler>
+			</Target>
+		</Build>
+		<Device>
+			<Add option="$device=cortex-m4" />
+			<Add option="$lscript=..\libs\ChibiOS\os\ports\GCC\ARMCMx\STM32F4xx\ld\STM32F407xG.ld" />
+		</Device>
+		<Compiler>
+			<Add option="-mfloat-abi=hard" />
+			<Add option="-Wall" />
+			<Add option="-DTTRACE_ON" />
+			<Add option="-D__FPU_USED" />
+			<Add option="-DARM_MATH_CM4" />
+			<Add option="-DHAVE_STDINT_H" />
+			<Add option="-DJANSSON_USE_CHIBIOS" />
+			<Add option="-mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant -fomit-frame-pointer -falign-functions=16 -DCORTEX_USE_FPU=1" />
+			<Add symbol="PORT_IDLE_THREAD_STACK_SIZE=1024" />
+			<Add symbol="PORT_INT_REQUIRED_STACK=1024" />
+			<Add symbol="JANSSON_USE_CHIBIOS=1" />
+			<Add directory="..\msc" />
+			<Add directory="..\libs\ChibiOS\os\kernel\include" />
+			<Add directory="..\libs\ChibiOS\os\ports\GCC\ARMCMx\STM32F4xx" />
+			<Add directory="..\libs\ChibiOS\os\ports\GCC\ARMCMx" />
+			<Add directory="..\libs\ChibiOS\os\ports\common\ARMCMx\CMSIS\include" />
+			<Add directory="..\libs\ChibiOS\os\ports\common\ARMCMx" />
+			<Add directory="..\libs\ChibiOS\os\hal\include" />
+			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32" />
+			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32F4xx" />
+			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\GPIOv2" />
+			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\TIMv1" />
+			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\SPIv2" />
+			<Add directory="..\libs\ugfx\boards\base\Embest-STM32-DMSTF4BB" />
+			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\I2Cv1" />
+			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\USARTv1" />
+			<Add directory="..\libs\ugfx" />
+		</Compiler>
+		<Cpp>
+			<Add option="-mfloat-abi=hard" />
+			<Add option="-fno-exceptions" />
+			<Add option="-fno-rtti" />
+			<Add option="-DTTRACE_ON" />
+			<Add option="-D__FPU_USED" />
+			<Add option="-DARM_MATH_CM4" />
+			<Add option="-DHAVE_STDINT_H" />
+			<Add option="-DJANSSON_USE_CHIBIOS" />
+			<Add option="-mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant -fomit-frame-pointer -falign-functions=16 -DCORTEX_USE_FPU=1" />
+		</Cpp>
+		<Linker>
+			<Add option="-eb_lib=f" />
+		</Linker>
+		<Unit filename="..\libs\ChibiOS\os\hal\include\gpt.h" />
+		<Unit filename="..\libs\ChibiOS\os\hal\include\hal.h" />
+		<Unit filename="..\libs\ChibiOS\os\hal\include\pal.h" />
+		<Unit filename="..\libs\ChibiOS\os\hal\include\serial.h" />
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\can_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\can_lld.h" />
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\ext_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\ext_lld.h" />
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\GPIOv2\pal_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\I2Cv1\i2c_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\mac_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\mac_lld.h" />
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\sdc_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\sdc_lld.h" />
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\SPIv1\spi_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\TIMv1\gpt_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\TIMv1\icu_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\TIMv1\pwm_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\USARTv1\serial_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\USARTv1\uart_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32F4xx\adc_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32F4xx\ext_lld_isr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32F4xx\hal_lld.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32F4xx\stm32_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\ext.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\gpt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\hal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\icu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\mac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\mmc_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\mmcsd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\pal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\pwm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\rtc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\sdc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\serial.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\serial_usb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\tm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\uart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\hal\src\usb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chcond.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chdebug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chdynamic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chevents.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chheap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chlists.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmboxes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmemcore.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmempools.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmsg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmtx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chqueues.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chregistry.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chschd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chsem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chsys.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chthreads.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\kernel\src\chvt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\ports\common\ARMCMx\nvic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\chcore.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\chcore.h" />
+		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\chcore_v7m.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\chcore_v7m.h" />
+		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\crt0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\STM32F4xx\vectors.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\dump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\hashtable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\hashtable.h" />
+		<Unit filename="..\libs\jansson\src\hashtable_seed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\jansson.h" />
+		<Unit filename="..\libs\jansson\src\jansson_private.h" />
+		<Unit filename="..\libs\jansson\src\load.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\lookup3.h" />
+		<Unit filename="..\libs\jansson\src\memory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\pack_unpack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\strbuffer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\strbuffer.h" />
+		<Unit filename="..\libs\jansson\src\strconv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\utf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\jansson\src\utf.h" />
+		<Unit filename="..\libs\jansson\src\value.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ugfx\boards\base\Embest-STM32-DMSTF4BB\board_SSD2119.h" />
+		<Unit filename="..\libs\ugfx\boards\base\Embest-STM32-DMSTF4BB\gmouse_lld_STMPE811_board.h" />
+		<Unit filename="..\libs\ugfx\drivers\gdisp\SSD2119\gdisp_lld_config.h" />
+		<Unit filename="..\libs\ugfx\drivers\gdisp\SSD2119\gdisp_lld_SSD2119.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ugfx\drivers\gdisp\SSD2119\ssd2119.h" />
+		<Unit filename="..\libs\ugfx\drivers\ginput\touch\STMPE811\gmouse_lld_STMPE811.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\libs\ugfx\drivers\ginput\touch\STMPE811\stmpe811.h" />
+		<Unit filename="..\libs\ugfx\src\gfx_mk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="blf_config.h" />
+		<Unit filename="board.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bsp.cpp">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+			<Option target="Debug">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-rtti" />
+				<Add option="-std=gnu++11" />
+			</Option>
+			<Option target="Release">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-rtti" />
+				<Add option="-std=gnu++11" />
+			</Option>
+			<Option target="Opt2">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-rtti" />
+				<Add option="-std=gnu++11" />
+			</Option>
+		</Unit>
+		<Unit filename="bsp.h" />
+		<Unit filename="chconf.h" />
+		<Unit filename="discovery_1wire\ds1820b.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-std=c99" />
+			</Option>
+			<Option target="Release">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-std=c99" />
+			</Option>
+			<Option target="Opt2">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-std=c99" />
+			</Option>
+		</Unit>
+		<Unit filename="discovery_1wire\ds1820b.h" />
+		<Unit filename="discovery_1wire\oneWire.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-std=gnu99" />
+			</Option>
+			<Option target="Release">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-std=gnu99" />
+			</Option>
+			<Option target="Opt2">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-std=gnu99" />
+			</Option>
+		</Unit>
+		<Unit filename="discovery_1wire\oneWire.h" />
+		<Unit filename="flowsensor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="flowsensor.h" />
+		<Unit filename="gfxconf.h" />
+		<Unit filename="gui.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-std=c99" />
+			</Option>
+			<Option target="Release">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-std=c99" />
+			</Option>
+			<Option target="Opt2">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-std=c99" />
+			</Option>
+		</Unit>
+		<Unit filename="gui.h" />
+		<Unit filename="halconf.h" />
+		<Unit filename="heater.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Debug">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-rtti" />
+				<Add option="-std=gnu++11" />
+			</Option>
+			<Option target="Release">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-rtti" />
+				<Add option="-std=gnu++11" />
+			</Option>
+			<Option target="Opt2">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-rtti" />
+				<Add option="-std=gnu++11" />
+			</Option>
+		</Unit>
+		<Unit filename="heater.h" />
+		<Unit filename="io_ifc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="io_ifc.h" />
+		<Unit filename="jansson_config.h" />
+		<Unit filename="lcd\fonts.h" />
+		<Unit filename="lcd\ssd2119.h" />
+		<Unit filename="main.cpp">
+			<Option compilerVar="CC" />
+			<Option target="Debug">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-rtti" />
+				<Add option="-std=gnu++11" />
+			</Option>
+			<Option target="Release">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-rtti" />
+				<Add option="-std=gnu++11" />
+			</Option>
+			<Option target="Opt2">
+				<Option CompilerOptionsRelation="3" />
+				<Add option="-fno-exceptions" />
+				<Add option="-fno-rtti" />
+				<Add option="-std=gnu++11" />
+			</Option>
+		</Unit>
+		<Unit filename="mcal_config.h" />
+		<Unit filename="mcuconf.h" />
+		<Unit filename="trace_config.h" />
+		<Unit filename="widgets\gui_test_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="widgets\romfs_files.h" />
+		<Extensions>
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="Debug" active_interface="OpenOCD">
+					<debug_interface interface_id="OpenOCD" ip_address="127.0.0.1" ip_port="3333" path="${EMBITZ}\share\contrib\openocd\bin" executable="openocd.exe" description="" dont_start_server="true" backoff_time="100" options="0" reg_filter="0" active_family="All">
+						<family_options family_id="All">
+							<option opt_id="ID_BOARD_CH" opt_value="stm32f4discovery" />
+							<option opt_id="ID_INTERFACE_CH" opt_value="" />
+							<option opt_id="ID_TARGET_CH" opt_value="" />
+							<option opt_id="ID_TEXTCTRL1" opt_value="" />
+							<option opt_id="ID_HW_BKP_LIMIT" opt_value="" />
+							<option opt_id="ID_RESET_CH" opt_value="halt" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_ADD_COMMANDS" opt_value="" />
+							<option opt_id="ID_ADD_CMNDS" opt_value="" />
+						</family_options>
+					</debug_interface>
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description=".\STM32F40x.svd" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="0" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+				<target_debugging_settings target="Release" active_interface="OpenOCD">
+					<debug_interface interface_id="OpenOCD" ip_address="127.0.0.1" ip_port="3333" path="${EMBITZ}\share\contrib\openocd\bin" executable="openocd.exe" description="" dont_start_server="true" backoff_time="100" options="0" reg_filter="0" active_family="All">
+						<family_options family_id="All">
+							<option opt_id="ID_BOARD_CH" opt_value="" />
+							<option opt_id="ID_INTERFACE_CH" opt_value="" />
+							<option opt_id="ID_TARGET_CH" opt_value="" />
+							<option opt_id="ID_TEXTCTRL1" opt_value="" />
+							<option opt_id="ID_HW_BKP_LIMIT" opt_value="" />
+							<option opt_id="ID_RESET_CH" opt_value="halt" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_ADD_COMMANDS" opt_value="" />
+							<option opt_id="ID_ADD_CMNDS" opt_value="" />
+						</family_options>
+					</debug_interface>
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description=".\STM32F40x.svd" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="0" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+				<target_debugging_settings target="Opt2" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description=".\STM32F40x.svd" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="0" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBitz_project_file>

@@ -1,0 +1,18 @@
+#ifndef TRACE_CONFIG_H
+#define TRACE_CONFIG_H
+
+//#define TTRACE_USE_UART 1
+
+// Application
+#define TRACE_ENABLE_ONEWIRE      TTRACE_INFO
+#define TRACE_ENABLE_MAIN         TTRACE_INFO
+
+
+// Drivers
+#define TRACE_ENABLE_MCAL_ETH     TTRACE_ALL
+#define TRACE_ENABLE_MCAL_RCC     TTRACE_ALL
+
+// Misc
+#define TRACE_ENABLE_BPP_TEST     TTRACE_ALL
+
+#endif
