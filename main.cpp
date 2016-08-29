@@ -14,9 +14,6 @@
 #include "regulator.h"
 #include "flowsensor.h"
 #include "io_ifc.h"
-//static const uint8_t testRomCode[8] = {0x28, 0x62, 0xd2, 0x74, 0x05, 0x00, 0x00, 0xfd};
-
-
 
 
 static OneWireDriver owDrv;
@@ -35,9 +32,8 @@ static const OneWireConfig owCfg = { .dqPort = GPIOC,
 
 
 
-OneWireRomAddress searchRom;
+static OneWireRomAddress searchRom;
 
-//struct tm tnow;
 int main(void)
 {
   halInit();
