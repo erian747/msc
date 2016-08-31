@@ -60,7 +60,7 @@
 		</Build>
 		<Device>
 			<Add option="$device=cortex-m4" />
-			<Add option="$lscript=..\libs\ChibiOS\os\ports\GCC\ARMCMx\STM32F4xx\ld\STM32F407xG.ld" />
+			<Add option="$lscript=ChibiOS\os\ports\GCC\ARMCMx\STM32F4xx\ld\STM32F407xG.ld" />
 		</Device>
 		<Compiler>
 			<Add option="-mfloat-abi=hard" />
@@ -75,21 +75,21 @@
 			<Add symbol="PORT_INT_REQUIRED_STACK=1024" />
 			<Add symbol="JANSSON_USE_CHIBIOS=1" />
 			<Add directory="..\msc" />
-			<Add directory="..\libs\ChibiOS\os\kernel\include" />
-			<Add directory="..\libs\ChibiOS\os\ports\GCC\ARMCMx\STM32F4xx" />
-			<Add directory="..\libs\ChibiOS\os\ports\GCC\ARMCMx" />
-			<Add directory="..\libs\ChibiOS\os\ports\common\ARMCMx\CMSIS\include" />
-			<Add directory="..\libs\ChibiOS\os\ports\common\ARMCMx" />
-			<Add directory="..\libs\ChibiOS\os\hal\include" />
-			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32" />
-			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32F4xx" />
-			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\GPIOv2" />
-			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\TIMv1" />
-			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\SPIv2" />
-			<Add directory="..\libs\ugfx\boards\base\Embest-STM32-DMSTF4BB" />
-			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\I2Cv1" />
-			<Add directory="..\libs\ChibiOS\os\hal\platforms\STM32\USARTv1" />
-			<Add directory="..\libs\ugfx" />
+			<Add directory="ChibiOS\os\kernel\include" />
+			<Add directory="ChibiOS\os\ports\GCC\ARMCMx\STM32F4xx" />
+			<Add directory="ChibiOS\os\ports\GCC\ARMCMx" />
+			<Add directory="ChibiOS\os\ports\common\ARMCMx\CMSIS\include" />
+			<Add directory="ChibiOS\os\ports\common\ARMCMx" />
+			<Add directory="ChibiOS\os\hal\include" />
+			<Add directory="ChibiOS\os\hal\platforms\STM32" />
+			<Add directory="ChibiOS\os\hal\platforms\STM32F4xx" />
+			<Add directory="ChibiOS\os\hal\platforms\STM32\GPIOv2" />
+			<Add directory="ChibiOS\os\hal\platforms\STM32\TIMv1" />
+			<Add directory="ChibiOS\os\hal\platforms\STM32\SPIv2" />
+			<Add directory="ugfx\boards\base\Embest-STM32-DMSTF4BB" />
+			<Add directory="ChibiOS\os\hal\platforms\STM32\I2Cv1" />
+			<Add directory="ChibiOS\os\hal\platforms\STM32\USARTv1" />
+			<Add directory="ugfx" />
 		</Compiler>
 		<Cpp>
 			<Add option="-mfloat-abi=hard" />
@@ -105,244 +105,244 @@
 		<Linker>
 			<Add option="-eb_lib=f" />
 		</Linker>
-		<Unit filename="..\libs\ChibiOS\os\hal\include\gpt.h" />
-		<Unit filename="..\libs\ChibiOS\os\hal\include\hal.h" />
-		<Unit filename="..\libs\ChibiOS\os\hal\include\pal.h" />
-		<Unit filename="..\libs\ChibiOS\os\hal\include\serial.h" />
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\can_lld.c">
+		<Unit filename="ChibiOS\os\hal\include\gpt.h" />
+		<Unit filename="ChibiOS\os\hal\include\hal.h" />
+		<Unit filename="ChibiOS\os\hal\include\pal.h" />
+		<Unit filename="ChibiOS\os\hal\include\serial.h" />
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\can_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\can_lld.h" />
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\ext_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\can_lld.h" />
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\ext_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\ext_lld.h" />
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\GPIOv2\pal_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\ext_lld.h" />
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\GPIOv2\pal_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\I2Cv1\i2c_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\I2Cv1\i2c_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\mac_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\mac_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\mac_lld.h" />
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\sdc_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\mac_lld.h" />
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\sdc_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\sdc_lld.h" />
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\SPIv1\spi_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\sdc_lld.h" />
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\SPIv1\spi_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\TIMv1\gpt_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\TIMv1\gpt_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\TIMv1\icu_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\TIMv1\icu_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\TIMv1\pwm_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\TIMv1\pwm_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\USARTv1\serial_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\USARTv1\serial_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32\USARTv1\uart_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32\USARTv1\uart_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32F4xx\adc_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32F4xx\adc_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32F4xx\ext_lld_isr.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32F4xx\ext_lld_isr.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32F4xx\hal_lld.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32F4xx\hal_lld.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\platforms\STM32F4xx\stm32_dma.c">
+		<Unit filename="ChibiOS\os\hal\platforms\STM32F4xx\stm32_dma.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\adc.c">
+		<Unit filename="ChibiOS\os\hal\src\adc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\can.c">
+		<Unit filename="ChibiOS\os\hal\src\can.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\ext.c">
+		<Unit filename="ChibiOS\os\hal\src\ext.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\gpt.c">
+		<Unit filename="ChibiOS\os\hal\src\gpt.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\hal.c">
+		<Unit filename="ChibiOS\os\hal\src\hal.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\i2c.c">
+		<Unit filename="ChibiOS\os\hal\src\i2c.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\icu.c">
+		<Unit filename="ChibiOS\os\hal\src\icu.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\mac.c">
+		<Unit filename="ChibiOS\os\hal\src\mac.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\mmc_spi.c">
+		<Unit filename="ChibiOS\os\hal\src\mmc_spi.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\mmcsd.c">
+		<Unit filename="ChibiOS\os\hal\src\mmcsd.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\pal.c">
+		<Unit filename="ChibiOS\os\hal\src\pal.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\pwm.c">
+		<Unit filename="ChibiOS\os\hal\src\pwm.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\rtc.c">
+		<Unit filename="ChibiOS\os\hal\src\rtc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\sdc.c">
+		<Unit filename="ChibiOS\os\hal\src\sdc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\serial.c">
+		<Unit filename="ChibiOS\os\hal\src\serial.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\serial_usb.c">
+		<Unit filename="ChibiOS\os\hal\src\serial_usb.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\spi.c">
+		<Unit filename="ChibiOS\os\hal\src\spi.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\tm.c">
+		<Unit filename="ChibiOS\os\hal\src\tm.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\uart.c">
+		<Unit filename="ChibiOS\os\hal\src\uart.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\hal\src\usb.c">
+		<Unit filename="ChibiOS\os\hal\src\usb.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chcond.c">
+		<Unit filename="ChibiOS\os\kernel\src\chcond.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chdebug.c">
+		<Unit filename="ChibiOS\os\kernel\src\chdebug.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chdynamic.c">
+		<Unit filename="ChibiOS\os\kernel\src\chdynamic.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chevents.c">
+		<Unit filename="ChibiOS\os\kernel\src\chevents.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chheap.c">
+		<Unit filename="ChibiOS\os\kernel\src\chheap.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chlists.c">
+		<Unit filename="ChibiOS\os\kernel\src\chlists.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmboxes.c">
+		<Unit filename="ChibiOS\os\kernel\src\chmboxes.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmemcore.c">
+		<Unit filename="ChibiOS\os\kernel\src\chmemcore.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmempools.c">
+		<Unit filename="ChibiOS\os\kernel\src\chmempools.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmsg.c">
+		<Unit filename="ChibiOS\os\kernel\src\chmsg.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chmtx.c">
+		<Unit filename="ChibiOS\os\kernel\src\chmtx.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chqueues.c">
+		<Unit filename="ChibiOS\os\kernel\src\chqueues.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chregistry.c">
+		<Unit filename="ChibiOS\os\kernel\src\chregistry.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chschd.c">
+		<Unit filename="ChibiOS\os\kernel\src\chschd.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chsem.c">
+		<Unit filename="ChibiOS\os\kernel\src\chsem.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chsys.c">
+		<Unit filename="ChibiOS\os\kernel\src\chsys.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chthreads.c">
+		<Unit filename="ChibiOS\os\kernel\src\chthreads.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\kernel\src\chvt.c">
+		<Unit filename="ChibiOS\os\kernel\src\chvt.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\ports\common\ARMCMx\nvic.c">
+		<Unit filename="ChibiOS\os\ports\common\ARMCMx\nvic.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\chcore.c">
+		<Unit filename="ChibiOS\os\ports\GCC\ARMCMx\chcore.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\chcore.h" />
-		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\chcore_v7m.c">
+		<Unit filename="ChibiOS\os\ports\GCC\ARMCMx\chcore.h" />
+		<Unit filename="ChibiOS\os\ports\GCC\ARMCMx\chcore_v7m.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\chcore_v7m.h" />
-		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\crt0.c">
+		<Unit filename="ChibiOS\os\ports\GCC\ARMCMx\chcore_v7m.h" />
+		<Unit filename="ChibiOS\os\ports\GCC\ARMCMx\crt0.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ChibiOS\os\ports\GCC\ARMCMx\STM32F4xx\vectors.c">
+		<Unit filename="ChibiOS\os\ports\GCC\ARMCMx\STM32F4xx\vectors.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\dump.c">
+		<Unit filename="jansson\src\dump.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\error.c">
+		<Unit filename="jansson\src\error.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\hashtable.c">
+		<Unit filename="jansson\src\hashtable.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\hashtable.h" />
-		<Unit filename="..\libs\jansson\src\hashtable_seed.c">
+		<Unit filename="jansson\src\hashtable.h" />
+		<Unit filename="jansson\src\hashtable_seed.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\jansson.h" />
-		<Unit filename="..\libs\jansson\src\jansson_private.h" />
-		<Unit filename="..\libs\jansson\src\load.c">
+		<Unit filename="jansson\src\jansson.h" />
+		<Unit filename="jansson\src\jansson_private.h" />
+		<Unit filename="jansson\src\load.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\lookup3.h" />
-		<Unit filename="..\libs\jansson\src\memory.c">
+		<Unit filename="jansson\src\lookup3.h" />
+		<Unit filename="jansson\src\memory.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\pack_unpack.c">
+		<Unit filename="jansson\src\pack_unpack.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\strbuffer.c">
+		<Unit filename="jansson\src\strbuffer.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\strbuffer.h" />
-		<Unit filename="..\libs\jansson\src\strconv.c">
+		<Unit filename="jansson\src\strbuffer.h" />
+		<Unit filename="jansson\src\strconv.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\utf.c">
+		<Unit filename="jansson\src\utf.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\jansson\src\utf.h" />
-		<Unit filename="..\libs\jansson\src\value.c">
+		<Unit filename="jansson\src\utf.h" />
+		<Unit filename="jansson\src\value.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ugfx\boards\base\Embest-STM32-DMSTF4BB\board_SSD2119.h" />
-		<Unit filename="..\libs\ugfx\boards\base\Embest-STM32-DMSTF4BB\gmouse_lld_STMPE811_board.h" />
-		<Unit filename="..\libs\ugfx\drivers\gdisp\SSD2119\gdisp_lld_config.h" />
-		<Unit filename="..\libs\ugfx\drivers\gdisp\SSD2119\gdisp_lld_SSD2119.c">
+		<Unit filename="ugfx\boards\base\Embest-STM32-DMSTF4BB\board_SSD2119.h" />
+		<Unit filename="ugfx\boards\base\Embest-STM32-DMSTF4BB\gmouse_lld_STMPE811_board.h" />
+		<Unit filename="ugfx\drivers\gdisp\SSD2119\gdisp_lld_config.h" />
+		<Unit filename="ugfx\drivers\gdisp\SSD2119\gdisp_lld_SSD2119.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ugfx\drivers\gdisp\SSD2119\ssd2119.h" />
-		<Unit filename="..\libs\ugfx\drivers\ginput\touch\STMPE811\gmouse_lld_STMPE811.c">
+		<Unit filename="ugfx\drivers\gdisp\SSD2119\ssd2119.h" />
+		<Unit filename="ugfx\drivers\ginput\touch\STMPE811\gmouse_lld_STMPE811.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\libs\ugfx\drivers\ginput\touch\STMPE811\stmpe811.h" />
-		<Unit filename="..\libs\ugfx\src\gfx_mk.c">
+		<Unit filename="ugfx\drivers\ginput\touch\STMPE811\stmpe811.h" />
+		<Unit filename="ugfx\src\gfx_mk.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="blf_config.h" />
